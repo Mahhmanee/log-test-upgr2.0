@@ -220,6 +220,41 @@ body.in-pane #mainLogoutBox {
   #mainLogoutBox { top: 12px; right: 12px; padding-left: 8px; }
 }
 
+
+/* CONTACTS FOOTER */
+.contacts-footer {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 680px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+.contacts-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+}
+.contacts-footer a:hover {
+  color: var(--accent2);
+  text-decoration: underline;
+}
+.contacts-footer .contact-label {
+  display: block;
+  margin-bottom: 4px;
+}
+@media(max-height:760px){
+  .contacts-footer {
+    position: static;
+    transform: none;
+    margin-top: 34px;
+  }
+}
+
 </style></head>
 <body class="auth-wait">
 
@@ -269,7 +304,12 @@ body.in-pane #mainLogoutBox {
 </div>
 <div class="logo">UČEBNICA</div><p class="sub">Konšpekty & testy na jednom mieste</p>
 <div class="cards"><div class="card" onclick="showSubjects('notes')"><span class="card-icon">📚</span><div class="card-title">KONŠPEKTY</div><div class="card-desc">Najprv vyber predmet a potom otvoríš materiál.</div><span class="card-btn">VYBRAŤ →</span></div>
-<div class="card" onclick="showSubjects('tests')"><span class="card-icon">🎯</span><div class="card-title">TESTY</div><div class="card-desc">Najprv vyber predmet a potom otvoríš testy.</div><span class="card-btn">VYBRAŤ →</span></div></div></div>
+<div class="card" onclick="showSubjects('tests')"><span class="card-icon">🎯</span><div class="card-title">TESTY</div><div class="card-desc">Najprv vyber predmet a potom otvoríš testy.</div><span class="card-btn">VYBRAŤ →</span></div></div>
+<div class="contacts-footer">
+  <span class="contact-label">Technická pomoc a návrhy na zlepšenie</span>
+  Telegram: <a href="https://t.me/Mahhmane" target="_blank" rel="noopener">@Mahhmane</a>
+</div>
+</div>
 <div id="subjectSelect"><div class="subject-kicker" id="subjectKicker">KONŠPEKTY</div><div class="logo">Vyber predmet</div><p class="sub" id="subjectSub">Pre ktorý predmet chceš otvoriť materiál?</p>
 <div class="cards" style="grid-template-columns:1fr;max-width:380px"><div class="card" onclick="openSelectedSubject('statistika')"><span class="card-icon">📊</span><div class="card-title">ŠTATISTIKA</div><div class="card-desc" id="subjectCardDesc">Kompletný konšpekt zo štatistiky</div><span class="card-btn">OTVORIŤ →</span></div></div>
 <div class="subject-actions"><button class="back" onclick="backToLanding()">← SPÄŤ</button></div></div>
